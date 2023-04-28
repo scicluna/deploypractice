@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "heroku-serve": "serve -s dist -l $PORT"
+    "heroku-serve": "serve -s dist -l tcp://0.0.0.0:${PORT}"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
