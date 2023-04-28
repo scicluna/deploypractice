@@ -1,0 +1,2 @@
+"build": "cd client && npm run build && cd .. && cp -r ./client/dist/* ./server/public && echo Done"\
+Try to serve my frontend without express.
