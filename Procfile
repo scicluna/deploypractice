@@ -1,1 +1,1 @@
-web: cd client && npm run heroku-serve
+web: node server/server.js && cd client && npm run heroku-serve
