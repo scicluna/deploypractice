@@ -4,6 +4,8 @@ module.exports = {
     async getThoughts(req, res) {
         try {
             const thoughts = await Thought.find().limit(100).sort({ createdAt: -1 })
+            console.log(thoughts)
+            console.log(res)
             res.json(thoughts);
         }
         catch (err) {
