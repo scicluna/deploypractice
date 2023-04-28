@@ -21,7 +21,13 @@ app.use(cors({
 //   res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
 // });
 
+app.use((req, res, next) => {
+  res.setHeader('Cache-Control', 'no-store');
+  next();
+});
+
 app.use(routes);
+
 
 db.once('open', () => {
   app.listen(PORT, () => {
