@@ -10,7 +10,7 @@
     "server": "cd server && npm run dev",
     "client": "cd client && npm run dev",
     "build": "cd client && npm run build",
-    "serve-heroku": "cd client && npm run heroku-serve"
+    "serve-heroku": "concurrently \"node server/server.js\" \"cd client && npm run heroku-serve\""
   },
   "keywords": [],
   "author": "",
